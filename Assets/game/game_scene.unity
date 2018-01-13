@@ -382,7 +382,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 200, y: 5}
-  m_SizeDelta: {x: 335, y: 50}
+  m_SizeDelta: {x: 335, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776835489
 MonoBehaviour:
@@ -405,17 +405,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 44
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 200
-    m_Alignment: 6
+    m_MaxSize: 300
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0
   m_Text: 000.00
 --- !u!222 &776835490
 CanvasRenderer:
@@ -603,8 +603,9 @@ MonoBehaviour:
   playSpeed: 1
   costMax: 11.25
   costValue: 0
-  costUpVec: 0.475
+  costUpVec: 2.2
   costTxt: {fileID: 776835489}
+  maxTxt: {fileID: 1702753036}
 --- !u!1 &1437678194
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +840,7 @@ GameObject:
   - component: {fileID: 1702753037}
   - component: {fileID: 1702753036}
   m_Layer: 5
-  m_Name: maxTexr
+  m_Name: maxText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
