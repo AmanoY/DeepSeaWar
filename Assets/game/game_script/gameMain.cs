@@ -13,10 +13,10 @@ public class gameMain : MonoBehaviour
     private int[] partyChara; //パーティーのキャラ編成
 
     //UI関連のオブジェクト
-    public Text costTxt;
+    public Text costTxt,maxTxt;
     void Start()
     {
-
+        maxTxt.text = "MAX " + costMax.ToString("000.00");
     }
 
     void Update()
@@ -25,8 +25,9 @@ public class gameMain : MonoBehaviour
         gameDeltaTime = Time.deltaTime * playSpeed;
 
         //コスト上昇処理
-        costValue += costUpVec * gameDeltaTime;
-        costTxt.text = costValue.ToString("000.00");
+        if(costValue < costMax) costValue += costUpVec * gameDeltaTime;
+        else costValue = costMax; //最大値で止める
+        costTxt.text = costValue.ToString("000.00"); //表示変更
     }
 
     void levelUp()
