@@ -10,8 +10,10 @@ public class gameMain : MonoBehaviour
     [SerializeField]
     private float playSpeed; //ゲームの速度、アイテムとかスキルで増減させるかな
     public float costMax, costValue, costUpVec; //持てるコストの最大値,現在のコスト所持
-    private int[] partyChara; //パーティーのキャラ編成
+    private int[] partyChara = new int[10]; //パーティーのキャラ編成
 
+    [SerializeField]
+    private GameObject charaBase;
     //UI関連のオブジェクト
     public Text costTxt,maxTxt;
     void Start()
@@ -32,5 +34,13 @@ public class gameMain : MonoBehaviour
 
     void levelUp()
     {
+    }
+
+    //キャラ生成呼び出し
+    public void generate(int windPosNum)
+    {
+        costValue -= 2.5f;
+        GameObject geneObj = Instantiate(charaBase) as GameObject;
+        geneObj.GetComponent<charaDataLoad>().loadData(partyChara[windPosNum]);
     }
 }
